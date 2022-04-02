@@ -21,3 +21,6 @@ Route::resource('client', ClientController::class);
 Route::get('client/{id}/edit', 'ClientController@edit')->name('client.edit');
 Route::put('client/{id}', 'ClientController@update')->name('client.update');
 Route::delete('client/{id}', 'ClientController@destroy')->name('client.destroy');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
